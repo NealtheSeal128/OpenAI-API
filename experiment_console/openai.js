@@ -1,1 +1,9 @@
+import OpenAI from "openai";
+const client = new OpenAI();
 
+const response = await client.responses.create({
+  model: "gpt-5.6",
+  input: "", 
+});
+
+console.log(response.output_text);
